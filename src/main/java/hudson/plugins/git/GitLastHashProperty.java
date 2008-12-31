@@ -7,6 +7,7 @@ import hudson.model.BuildListener;
 import hudson.model.Job;
 import hudson.model.JobProperty;
 import hudson.model.JobPropertyDescriptor;
+import hudson.scm.SCM;
 
 import java.io.IOException;
 
