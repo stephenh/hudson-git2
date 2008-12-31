@@ -7,6 +7,7 @@ import hudson.model.BuildListener;
 import hudson.model.Job;
 import hudson.model.JobProperty;
 import hudson.model.JobPropertyDescriptor;
+import hudson.scm.SCM;
 
 import java.io.IOException;
 
@@ -28,8 +29,7 @@ public class GitLastHashProperty extends JobProperty<AbstractProject<?, ?>> {
 		// Make sure we can cast to GitSCM; it's possible that this will be hudson.scm.NullSCM
 		if (!(genericScm instanceof GitSCM))
 			return true;
-		GitSCM scm = (GitSCM)genericScm;
-		GitSCM scm = (GitSCM) build.getProject().getScm();
+		GitSCM scm = (GitSCM) genericScm;
 		GitAPI git = new GitAPI(scm.getDescriptor(), launcher, build.getParent().getWorkspace(), listener);
 		String tipHash = git.revParse(scm.getRemoteBranch());
 
