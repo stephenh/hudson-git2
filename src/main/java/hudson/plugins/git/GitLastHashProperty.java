@@ -29,7 +29,6 @@ public class GitLastHashProperty extends JobProperty<AbstractProject<?, ?>> {
 		if (!(genericScm instanceof GitSCM))
 			return true;
 		GitSCM scm = (GitSCM)genericScm;
-		GitSCM scm = (GitSCM) build.getProject().getScm();
 		GitAPI git = new GitAPI(scm.getDescriptor(), launcher, build.getParent().getWorkspace(), listener);
 		String tipHash = git.revParse(scm.getRemoteBranch());
 
