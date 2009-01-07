@@ -10,8 +10,14 @@ That's all I remember as I don't have a Hudson instance in front of me.
 Building
 ========
 
-* This plugin expects to live in the `hudson/plugins/git2` directory of a Hudson svn checkout
-* Then just run `mvn` from the `git2` directory
+You do try either:
+
+1. Within the Hudson tree
+  * The plugin originally expected to live in the `hudson/plugins/git2` directory of a Hudson svn checkout
+  * While in the `git2` directory, just run `mvn`
+2. Standalone tree
+  * While in the `hudson-git2` directory, with no parent Hudson source, `mvn` might work
+  * Note: you may have to move `dotm2_settings.xml` to `~/.m2/settings.xml`
 
 Notes
 =====
