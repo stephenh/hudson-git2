@@ -1,4 +1,11 @@
 
+Note
+====
+
+This plugin is no longer actively developed. It was written it to do a dead-simple status check+checkout at a time when the official Hudson git plugin had more features than stability (mainly for large repositories).
+
+Given the on-going development of the official Hudson git plugin, this situation has likely improved, so I recommend using it if you can and only falling back to this plugin if you have to.
+
 Install
 =======
 
